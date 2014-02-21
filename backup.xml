@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsb>
+	<configuration>
+		<workingdir>.</workingdir>
+		<lib>backupMod</lib>
+	</configuration>
+	<sources>
+		<source name="target" type="directory" path="c:\testbackup" gzip="true" />
+	</sources>
+	<destinations>
+		<destination name="dest" type="directory" path="c:\dest" />
+		<destination name="ftp_dest" type="ftp" host="myhost" user="myuser" passwd="mypass" />
+	</destinations>
+	<backups>
+		<backup source="target" destination="dest" />
+	</backups>
+</jsb>
