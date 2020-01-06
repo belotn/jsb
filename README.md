@@ -64,13 +64,19 @@ Mysql Databases to be backed up
 List of destinations.
 
 #### Directory
+Archive should be copied to this local directory, and it create path PAth/YYYY/MM/DD and save all file under it
+##### Attributes
   - name 
     Name of the destination, use in backup routes
   - path 
     Path where archive sould be put.
   - type directory
-
+##### Example
+`<destination name="dest" type="directory" path="/var/backups/mybackups" />`
+ 
 #### FTP
+Archive should be copied to this ftp directory, and it create path PAth/YYYY/MM/DD and save all file under it
+##### Attributes
   - name 
     Name of the destination, use in backup routes.
   - host 
@@ -80,10 +86,14 @@ List of destinations.
   - passwd 
     ftp password
   - type ftp
-
+##### Example
+` <destination name="ftp_dest" type="ftp" host="myhost" user="myuser" passwd="mypass" />`
 ### Backup Routes
 link between source and destination
+##### Attributes
   - source
     Name of the source to be backup
   - destination
     Name of the backup destination
+##### Example
+` <backup source="db_wp" destination="local" />`
