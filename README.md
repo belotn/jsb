@@ -18,12 +18,14 @@ Where should i work.
 
 #### Lib
 
-Python Lib Script to load 
+Python Lib Script to load, bu default backupMod incule Directory, Mysql and FTP backup functions
 
 ### Sources
 
 List of sources to be backup. Source attributes are type dependent.
 #### Directory
+Directory to backed up via "tar" utility
+##### Attributes
   Backup a directory.
   - name
     Name of the source, use to create archive file and in backup routes.
@@ -34,9 +36,13 @@ List of sources to be backup. Source attributes are type dependent.
   - bzip
     use bZip compression, archive name is name.tbz then
   - type directory
+  ##### Examples
+  ` <source name="file_wp" type="directory" path="/usr/local/www/wordpress" gzip="true" />`
   
   
 #### MySQL
+Mysql Databases to be backed up
+##### Attributes
   Backup sql Database
   - name
     NAme of the source, use to create archive file and in backup routes.
@@ -49,7 +55,8 @@ List of sources to be backup. Source attributes are type dependent.
   - database
     Data to be backuped
   - type mysql
-  
+##### Examples
+` <source name="db_wp" type="mysql"  socket="/path/to/mysql.sock" user="MyUser" passwd="MyPassword" database="databasename"/>`
 
 
 ### Destinations
