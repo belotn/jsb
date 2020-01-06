@@ -26,18 +26,20 @@ List of sources to be backup. Source attributes are type dependent.
 #### Directory
   Backup a directory.
   - name
-    NAme of the source, use to create archive file
+    Name of the source, use to create archive file and in backup routes.
   - path
     Path of the Directory to be backuped
   - gzip
     use gZip compression, archive name is name.tgz then
   - bzip
     use bZip compression, archive name is name.tbz then
+  - type directory
+  
   
 #### MySQL
   Backup sql Database
   - name
-    NAme of the source, use to create archive file.
+    NAme of the source, use to create archive file and in backup routes.
   - host / socket 
     Specify the hostname (host) or the socket (socket) to use, do not specify for localhost
   - user
@@ -45,13 +47,36 @@ List of sources to be backup. Source attributes are type dependent.
   - passwd
     password...
   - database
+    Data to be backuped
+  - type mysql
   
 
 
 ### Destinations
 
-List of destinations
+List of destinations.
+
+#### Directory
+  - name 
+    Name of the destination, use in backup routes
+  - path 
+    Path where archive sould be put.
+  - type directory
+
+#### FTP
+  - name 
+    Name of the destination, use in backup routes.
+  - host 
+    Ftp server hostname
+  - user  
+    ftp username
+  - passwd 
+    ftp password
+  - type ftp
 
 ### Backup Routes
-
 link between source and destination
+  - source
+    Name of the source to be backup
+  - destination
+    Name of the backup destination
