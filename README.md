@@ -1,34 +1,33 @@
-jsb
-=
+# jsb
+
 Just a Single Backup Tool
 
-Purpose
-==
+## Purpose
+
 An easy and reliable backup tool
 By default, it looks for file backup.xml in the working directory
 
-XML Syntax
-==
+## XML Syntax
+### Configuration
 
-Confiugation
-===
 Configuration Items
 
-WorkingDir
-====
+#### WorkingDir
+
 Where should i work.
 
-Lib
-====
+#### Lib
+
 Python Lib Script to load 
 
-Sources
-===
+### Sources
+
 List of sources
-Destinations
-===
+
+### Destinations
+
 List of destinations
 
-Backup Routes
-===
+### Backup Routes
+
 link between source and destination
