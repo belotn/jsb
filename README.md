@@ -18,7 +18,7 @@ Where should i work.
 
 #### Lib
 
-Python Lib Script to load, bu default backupMod incule Directory, Mysql and FTP backup functions
+Python Lib Script to load, by default backupMod incule Directory, Mysql and FTP backup functions
 
 ### Sources
 
